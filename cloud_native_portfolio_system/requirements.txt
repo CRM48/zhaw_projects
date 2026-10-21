@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pydantic>=2
+redis
+pandas
+numpy
+requests
+httpx
+nats-py

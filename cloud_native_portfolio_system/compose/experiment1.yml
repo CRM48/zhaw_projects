@@ -1,0 +1,208 @@
+name: vt-exp1
+
+services:
+
+  # -------------------------------------------------------------------
+  # Redis
+  # -------------------------------------------------------------------
+
+  redis:
+    image: redis:latest
+    container_name: vt-exp1-redis
+
+    command:
+      - redis-server
+      - --save
+      - ""
+      - --appendonly
+      - "no"
+
+    healthcheck:
+      test:
+        - CMD
+        - redis-cli
+        - ping
+      interval: 2s
+      timeout: 2s
+      retries: 10
+
+
+  # -------------------------------------------------------------------
+  # Monolith
+  # -------------------------------------------------------------------
+
+  monolith:
+    image: vt-experiments:local
+    container_name: vt-exp1-monolith
+
+    command:
+      - python
+      - -m
+      - src.ur_pipeline.monolith_api
+
+    environment:
+      MD_REDIS_HOST: redis
+      MD_REDIS_PORT: "6379"
+
+    ports:
+      - "8100:8100"
+
+    depends_on:
+      redis:
+        condition: service_healthy
+
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import requests; requests.get('http://127.0.0.1:8100/health', timeout=2).raise_for_status()"
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+
+  # -------------------------------------------------------------------
+  # Request Processor
+  # -------------------------------------------------------------------
+
+  request-processor:
+    image: vt-experiments:local
+    container_name: vt-exp1-request-processor
+
+    command:
+      - python
+      - -m
+      - src.ur_pipeline.services.request_processor_service
+
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import requests; requests.get('http://127.0.0.1:8201/health', timeout=2).raise_for_status()"
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+
+  # -------------------------------------------------------------------
+  # Portfolio Generator
+  # -------------------------------------------------------------------
+
+  portfolio-generator:
+    image: vt-experiments:local
+    container_name: vt-exp1-portfolio-generator
+
+    command:
+      - python
+      - -m
+      - src.ur_pipeline.services.portfolio_generator_service
+
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import requests; requests.get('http://127.0.0.1:8202/health', timeout=2).raise_for_status()"
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+
+  # -------------------------------------------------------------------
+  # Portfolio Evaluator
+  # -------------------------------------------------------------------
+
+  portfolio-evaluator:
+    image: vt-experiments:local
+    container_name: vt-exp1-portfolio-evaluator
+
+    command:
+      - python
+      - -m
+      - src.ur_pipeline.services.portfolio_evaluator_service
+
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import requests; requests.get('http://127.0.0.1:8203/health', timeout=2).raise_for_status()"
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+
+  # -------------------------------------------------------------------
+  # Microservice Coordinator
+  # -------------------------------------------------------------------
+
+  coordinator:
+    image: vt-experiments:local
+    container_name: vt-exp1-coordinator
+
+    command:
+      - python
+      - -m
+      - src.ur_pipeline.coordinator_api
+
+    environment:
+
+      MD_REDIS_HOST: redis
+      MD_REDIS_PORT: "6379"
+
+      UR_REQUEST_PROCESSOR_URL: http://request-processor:8201/process
+      UR_PORTFOLIO_GENERATOR_URL: http://portfolio-generator:8202/generate
+      UR_PORTFOLIO_EVALUATOR_URL: http://portfolio-evaluator:8203/evaluate
+
+    ports:
+      - "8200:8200"
+
+    depends_on:
+
+      redis:
+        condition: service_healthy
+
+      request-processor:
+        condition: service_healthy
+
+      portfolio-generator:
+        condition: service_healthy
+
+      portfolio-evaluator:
+        condition: service_healthy
+
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import requests; requests.get('http://127.0.0.1:8200/health', timeout=2).raise_for_status()"
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+
+  # -------------------------------------------------------------------
+  # Experiment workload generator
+  #
+  # This is run manually with:
+  #
+  # docker compose ... run --rm user-load ...
+  # -------------------------------------------------------------------
+
+  user-load:
+    image: vt-experiments:local
+
+    environment:
+      UR_MONOLITH_API_URL: http://monolith:8100/portfolio
+      UR_COORDINATOR_URL: http://coordinator:8200/portfolio
+
+    entrypoint:
+      - python
+      - -m
+      - helpers.user_request_generator
+
+    volumes:
+      - ../results:/app/results

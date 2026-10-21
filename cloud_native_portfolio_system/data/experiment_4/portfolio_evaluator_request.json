@@ -1,0 +1,1172 @@
+{
+  "user_signal": {
+    "request_id": "EXP4_REQUEST",
+    "target_return": 0.0021,
+    "target_risk": 0.013000000000000001,
+    "diversification_target": 0.8
+  },
+  "portfolios": [
+    {
+      "request_id": "EXP4_REQUEST",
+      "portfolio_id": "EXP4_REQUEST_P01",
+      "holdings": [
+        {
+          "asset_id": "ASSET_0076",
+          "weight": 0.1
+        },
+        {
+          "asset_id": "ASSET_0049",
+          "weight": 0.1
+        },
+        {
+          "asset_id": "ASSET_0073",
+          "weight": 0.1
+        },
+        {
+          "asset_id": "ASSET_0036",
+          "weight": 0.1
+        },
+        {
+          "asset_id": "ASSET_0054",
+          "weight": 0.1
+        },
+        {
+          "asset_id": "ASSET_0046",
+          "weight": 0.1
+        },
+        {
+          "asset_id": "ASSET_0045",
+          "weight": 0.1
+        },
+        {
+          "asset_id": "ASSET_0084",
+          "weight": 0.1
+        },
+        {
+          "asset_id": "ASSET_0002",
+          "weight": 0.1
+        },
+        {
+          "asset_id": "ASSET_0017",
+          "weight": 0.1
+        }
+      ]
+    },
+    {
+      "request_id": "EXP4_REQUEST",
+      "portfolio_id": "EXP4_REQUEST_P02",
+      "holdings": [
+        {
+          "asset_id": "ASSET_0076",
+          "weight": 0.13333333333333333
+        },
+        {
+          "asset_id": "ASSET_0049",
+          "weight": 0.1259259259259259
+        },
+        {
+          "asset_id": "ASSET_0073",
+          "weight": 0.11851851851851851
+        },
+        {
+          "asset_id": "ASSET_0036",
+          "weight": 0.1111111111111111
+        },
+        {
+          "asset_id": "ASSET_0054",
+          "weight": 0.1037037037037037
+        },
+        {
+          "asset_id": "ASSET_0046",
+          "weight": 0.0962962962962963
+        },
+        {
+          "asset_id": "ASSET_0084",
+          "weight": 0.08888888888888888
+        },
+        {
+          "asset_id": "ASSET_0017",
+          "weight": 0.08148148148148149
+        },
+        {
+          "asset_id": "ASSET_0045",
+          "weight": 0.07407407407407408
+        },
+        {
+          "asset_id": "ASSET_0031",
+          "weight": 0.06666666666666667
+        }
+      ]
+    },
+    {
+      "request_id": "EXP4_REQUEST",
+      "portfolio_id": "EXP4_REQUEST_P03",
+      "holdings": [
+        {
+          "asset_id": "ASSET_0076",
+          "weight": 0.15
+        },
+        {
+          "asset_id": "ASSET_0049",
+          "weight": 0.1388888888888889
+        },
+        {
+          "asset_id": "ASSET_0073",
+          "weight": 0.12777777777777777
+        },
+        {
+          "asset_id": "ASSET_0036",
+          "weight": 0.11666666666666665
+        },
+        {
+          "asset_id": "ASSET_0054",
+          "weight": 0.10555555555555556
+        },
+        {
+          "asset_id": "ASSET_0046",
+          "weight": 0.09444444444444444
+        },
+        {
+          "asset_id": "ASSET_0017",
+          "weight": 0.08333333333333333
+        },
+        {
+          "asset_id": "ASSET_0084",
+          "weight": 0.07222222222222222
+        },
+        {
+          "asset_id": "ASSET_0045",
+          "weight": 0.061111111111111116
+        },
+        {
+          "asset_id": "ASSET_0031",
+          "weight": 0.05
+        }
+      ]
+    },
+    {
+      "request_id": "EXP4_REQUEST",
+      "portfolio_id": "EXP4_REQUEST_P04",
+      "holdings": [
+        {
+          "asset_id": "ASSET_0076",
+          "weight": 0.16
+        },
+        {
+          "asset_id": "ASSET_0049",
+          "weight": 0.14666666666666667
+        },
+        {
+          "asset_id": "ASSET_0073",
+          "weight": 0.13333333333333333
+        },
+        {
+          "asset_id": "ASSET_0046",
+          "weight": 0.12
+        },
+        {
+          "asset_id": "ASSET_0036",
+          "weight": 0.10666666666666666
+        },
+        {
+          "asset_id": "ASSET_0054",
+          "weight": 0.09333333333333332
+        },
+        {
+          "asset_id": "ASSET_0017",
+          "weight": 0.08
+        },
+        {
+          "asset_id": "ASSET_0084",
+          "weight": 0.06666666666666667
+        },
+        {
+          "asset_id": "ASSET_0045",
+          "weight": 0.05333333333333333
+        },
+        {
+          "asset_id": "ASSET_0031",
+          "weight": 0.04
+        }
+      ]
+    },
+    {
+      "request_id": "EXP4_REQUEST",
+      "portfolio_id": "EXP4_REQUEST_P05",
+      "holdings": [
+        {
+          "asset_id": "ASSET_0076",
+          "weight": 0.16666666666666666
+        },
+        {
+          "asset_id": "ASSET_0049",
+          "weight": 0.15185185185185185
+        },
+        {
+          "asset_id": "ASSET_0073",
+          "weight": 0.137037037037037
+        },
+        {
+          "asset_id": "ASSET_0046",
+          "weight": 0.12222222222222222
+        },
+        {
+          "asset_id": "ASSET_0017",
+          "weight": 0.10740740740740741
+        },
+        {
+          "asset_id": "ASSET_0054",
+          "weight": 0.09259259259259259
+        },
+        {
+          "asset_id": "ASSET_0036",
+          "weight": 0.07777777777777777
+        },
+        {
+          "asset_id": "ASSET_0084",
+          "weight": 0.06296296296296296
+        },
+        {
+          "asset_id": "ASSET_0045",
+          "weight": 0.04814814814814815
+        },
+        {
+          "asset_id": "ASSET_0094",
+          "weight": 0.03333333333333333
+        }
+      ]
+    },
+    {
+      "request_id": "EXP4_REQUEST",
+      "portfolio_id": "EXP4_REQUEST_P06",
+      "holdings": [
+        {
+          "asset_id": "ASSET_0076",
+          "weight": 0.17142857142857143
+        },
+        {
+          "asset_id": "ASSET_0049",
+          "weight": 0.15555555555555556
+        },
+        {
+          "asset_id": "ASSET_0073",
+          "weight": 0.13968253968253969
+        },
+        {
+          "asset_id": "ASSET_0046",
+          "weight": 0.12380952380952383
+        },
+        {
+          "asset_id": "ASSET_0017",
+          "weight": 0.10793650793650793
+        },
+        {
+          "asset_id": "ASSET_0054",
+          "weight": 0.09206349206349207
+        },
+        {
+          "asset_id": "ASSET_0036",
+          "weight": 0.0761904761904762
+        },
+        {
+          "asset_id": "ASSET_0094",
+          "weight": 0.06031746031746032
+        },
+        {
+          "asset_id": "ASSET_0084",
+          "weight": 0.044444444444444446
+        },
+        {
+          "asset_id": "ASSET_0045",
+          "weight": 0.02857142857142857
+        }
+      ]
+    },
+    {
+      "request_id": "EXP4_REQUEST",
+      "portfolio_id": "EXP4_REQUEST_P07",
+      "holdings": [
+        {
+          "asset_id": "ASSET_0076",
+          "weight": 0.175
+        },
+        {
+          "asset_id": "ASSET_0049",
+          "weight": 0.15833333333333333
+        },
+        {
+          "asset_id": "ASSET_0046",
+          "weight": 0.14166666666666666
+        },
+        {
+          "asset_id": "ASSET_0073",
+          "weight": 0.125
+        },
+        {
+          "asset_id": "ASSET_0017",
+          "weight": 0.10833333333333332
+        },
+        {
+          "asset_id": "ASSET_0054",
+          "weight": 0.09166666666666666
+        },
+        {
+          "asset_id": "ASSET_0094",
+          "weight": 0.075
+        },
+        {
+          "asset_id": "ASSET_0036",
+          "weight": 0.05833333333333333
+        },
+        {
+          "asset_id": "ASSET_0072",
+          "weight": 0.041666666666666664
+        },
+        {
+          "asset_id": "ASSET_0084",
+          "weight": 0.025
+        }
+      ]
+    },
+    {
+      "request_id": "EXP4_REQUEST",
+      "portfolio_id": "EXP4_REQUEST_P08",
+      "holdings": [
+        {
+          "asset_id": "ASSET_0076",
+          "weight": 0.17777777777777778
+        },
+        {
+          "asset_id": "ASSET_0049",
+          "weight": 0.16049382716049382
+        },
+        {
+          "asset_id": "ASSET_0046",
+          "weight": 0.14320987654320988
+        },
+        {
+          "asset_id": "ASSET_0017",
+          "weight": 0.12592592592592594
+        },
+        {
+          "asset_id": "ASSET_0073",
+          "weight": 0.10864197530864199
+        },
+        {
+          "asset_id": "ASSET_0094",
+          "weight": 0.09135802469135802
+        },
+        {
+          "asset_id": "ASSET_0054",
+          "weight": 0.07407407407407408
+        },
+        {
+          "asset_id": "ASSET_0072",
+          "weight": 0.05679012345679012
+        },
+        {
+          "asset_id": "ASSET_0035",
+          "weight": 0.03950617283950617
+        },
+        {
+          "asset_id": "ASSET_0090",
+          "weight": 0.022222222222222223
+        }
+      ]
+    },
+    {
+      "request_id": "EXP4_REQUEST",
+      "portfolio_id": "EXP4_REQUEST_P09",
+      "holdings": [
+        {
+          "asset_id": "ASSET_0076",
+          "weight": 0.18
+        },
+        {
+          "asset_id": "ASSET_0049",
+          "weight": 0.1622222222222222
+        },
+        {
+          "asset_id": "ASSET_0046",
+          "weight": 0.14444444444444443
+        },
+        {
+          "asset_id": "ASSET_0017",
+          "weight": 0.12666666666666665
+        },
+        {
+          "asset_id": "ASSET_0073",
+          "weight": 0.1088888888888889
+        },
+        {
+          "asset_id": "ASSET_0094",
+          "weight": 0.0911111111111111
+        },
+        {
+          "asset_id": "ASSET_0072",
+          "weight": 0.07333333333333333
+        },
+        {
+          "asset_id": "ASSET_0035",
+          "weight": 0.05555555555555555
+        },
+        {
+          "asset_id": "ASSET_0054",
+          "weight": 0.03777777777777778
+        },
+        {
+          "asset_id": "ASSET_0090",
+          "weight": 0.02
+        }
+      ]
+    },
+    {
+      "request_id": "EXP4_REQUEST",
+      "portfolio_id": "EXP4_REQUEST_P10",
+      "holdings": [
+        {
+          "asset_id": "ASSET_0076",
+          "weight": 0.18181818181818182
+        },
+        {
+          "asset_id": "ASSET_0049",
+          "weight": 0.16363636363636364
+        },
+        {
+          "asset_id": "ASSET_0046",
+          "weight": 0.14545454545454545
+        },
+        {
+          "asset_id": "ASSET_0017",
+          "weight": 0.12727272727272726
+        },
+        {
+          "asset_id": "ASSET_0094",
+          "weight": 0.10909090909090909
+        },
+        {
+          "asset_id": "ASSET_0035",
+          "weight": 0.09090909090909091
+        },
+        {
+          "asset_id": "ASSET_0072",
+          "weight": 0.07272727272727272
+        },
+        {
+          "asset_id": "ASSET_0073",
+          "weight": 0.05454545454545454
+        },
+        {
+          "asset_id": "ASSET_0090",
+          "weight": 0.03636363636363636
+        },
+        {
+          "asset_id": "ASSET_0064",
+          "weight": 0.01818181818181818
+        }
+      ]
+    }
+  ],
+  "asset_signals": [
+    {
+      "asset_id": "ASSET_0001",
+      "last_price": 236.7077,
+      "expected_return": 0.0006584422824062,
+      "risk": 0.0193219994131749,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0002",
+      "last_price": 142.886,
+      "expected_return": 0.0001881919739023,
+      "risk": 0.0121423119179323,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0003",
+      "last_price": 260.4074,
+      "expected_return": -0.0005102905056125,
+      "risk": 0.0220373571149308,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0004",
+      "last_price": 215.263,
+      "expected_return": 0.0004913500013205,
+      "risk": 0.0098195432052623,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0005",
+      "last_price": 46.3697,
+      "expected_return": -0.0008310382086458,
+      "risk": 0.0157678698017324,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0006",
+      "last_price": 293.1743,
+      "expected_return": 0.0005488356688975,
+      "risk": 0.0086827843429836,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0007",
+      "last_price": 233.1191,
+      "expected_return": 0.000179970444486,
+      "risk": 0.0149060123277168,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0008",
+      "last_price": 240.098,
+      "expected_return": -0.0007784993632071,
+      "risk": 0.0080493301795677,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0009",
+      "last_price": 55.8718,
+      "expected_return": -0.0008409888738152,
+      "risk": 0.0082315724874304,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0010",
+      "last_price": 146.1081,
+      "expected_return": 0.0005016726668729,
+      "risk": 0.0172444675408403,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0011",
+      "last_price": 123.8234,
+      "expected_return": -0.0004141281869923,
+      "risk": 0.0102757208435153,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0012",
+      "last_price": 279.4942,
+      "expected_return": 0.0007786037015344,
+      "risk": 0.0084473445312849,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0013",
+      "last_price": 200.2822,
+      "expected_return": 0.0005241460420603,
+      "risk": 0.0235953650027014,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0014",
+      "last_price": 250.3733,
+      "expected_return": 0.0003963804894354,
+      "risk": 0.005860065014801,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0015",
+      "last_price": 144.156,
+      "expected_return": -0.000442787894733,
+      "risk": 0.0163029622539177,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0016",
+      "last_price": 83.6268,
+      "expected_return": 0.0004178890380432,
+      "risk": 0.0159652768366653,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0017",
+      "last_price": 175.2837,
+      "expected_return": 0.0008962953690296,
+      "risk": 0.0100121774880611,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0018",
+      "last_price": 37.8688,
+      "expected_return": -0.0008168803312588,
+      "risk": 0.0140554349022563,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0019",
+      "last_price": 251.7367,
+      "expected_return": -0.0003476747159928,
+      "risk": 0.0067547556616527,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0020",
+      "last_price": 196.866,
+      "expected_return": -0.0005306554690768,
+      "risk": 0.0194254029184777,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0021",
+      "last_price": 232.2646,
+      "expected_return": -0.0002134997311986,
+      "risk": 0.0094339429675364,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0022",
+      "last_price": 119.2673,
+      "expected_return": 0.0004846653097078,
+      "risk": 0.0088677071965311,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0023",
+      "last_price": 291.7954,
+      "expected_return": -5.15148371492269e-05,
+      "risk": 0.01129756956555,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0024",
+      "last_price": 270.0739,
+      "expected_return": 0.0001414612122404,
+      "risk": 0.0230473984052628,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0025",
+      "last_price": 237.9474,
+      "expected_return": -0.0003716902238433,
+      "risk": 0.0209293329656708,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0026",
+      "last_price": 74.4988,
+      "expected_return": -0.0007174214658257,
+      "risk": 0.0239378458226751,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0027",
+      "last_price": 150.6819,
+      "expected_return": -0.0004661327021245,
+      "risk": 0.0180392469206617,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0028",
+      "last_price": 32.2651,
+      "expected_return": 0.0007193606024839,
+      "risk": 0.0182584302206417,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0029",
+      "last_price": 63.2011,
+      "expected_return": 0.0002048339243068,
+      "risk": 0.0146006199885243,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0030",
+      "last_price": 211.2537,
+      "expected_return": -0.0002440226536055,
+      "risk": 0.0231037264673395,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0031",
+      "last_price": 228.5334,
+      "expected_return": 0.0005798119634711,
+      "risk": 0.0152175429854065,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0032",
+      "last_price": 290.9027,
+      "expected_return": -0.0008710851350901,
+      "risk": 0.0121012014159004,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0033",
+      "last_price": 111.2311,
+      "expected_return": -0.0004922178241552,
+      "risk": 0.0178075001983533,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0034",
+      "last_price": 123.7287,
+      "expected_return": -0.0005397936918853,
+      "risk": 0.0159227898680192,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0035",
+      "last_price": 151.4756,
+      "expected_return": 0.0009707291243364,
+      "risk": 0.0074803963061979,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0036",
+      "last_price": 73.052,
+      "expected_return": 0.0004121971647855,
+      "risk": 0.0128545082782485,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0037",
+      "last_price": 56.378,
+      "expected_return": 0.0002355718727771,
+      "risk": 0.0112665082218896,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0038",
+      "last_price": 153.1974,
+      "expected_return": -0.000990030069411,
+      "risk": 0.0219366755002226,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0039",
+      "last_price": 83.5346,
+      "expected_return": -0.0006313799958202,
+      "risk": 0.0125768511394621,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0040",
+      "last_price": 207.5479,
+      "expected_return": 0.0002710825859461,
+      "risk": 0.0214311046527778,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0041",
+      "last_price": 142.4025,
+      "expected_return": -0.0002405613470366,
+      "risk": 0.0138477918780189,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0042",
+      "last_price": 253.1499,
+      "expected_return": 0.0008485607673581,
+      "risk": 0.0200700112689122,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0043",
+      "last_price": 216.0742,
+      "expected_return": 0.0005294484382835,
+      "risk": 0.0077056385702237,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0044",
+      "last_price": 107.4627,
+      "expected_return": -0.0001052318543917,
+      "risk": 0.0234930043931692,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0045",
+      "last_price": 253.0327,
+      "expected_return": 0.0004990299550765,
+      "risk": 0.0146111978159783,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0046",
+      "last_price": 245.334,
+      "expected_return": 0.0009508086476524,
+      "risk": 0.0101959649125261,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0047",
+      "last_price": 128.4939,
+      "expected_return": -7.803835059705876e-05,
+      "risk": 0.0098297921272961,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0048",
+      "last_price": 100.7319,
+      "expected_return": 0.000285051775777,
+      "risk": 0.0103015457714994,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0049",
+      "last_price": 211.0987,
+      "expected_return": 0.0008373292301225,
+      "risk": 0.0123344834583593,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0050",
+      "last_price": 59.1307,
+      "expected_return": -0.0005026506759276,
+      "risk": 0.0193503906535123,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0051",
+      "last_price": 75.9743,
+      "expected_return": 0.0007731158273325,
+      "risk": 0.0239920608580158,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0052",
+      "last_price": 22.0614,
+      "expected_return": -0.000804910586454,
+      "risk": 0.0183807486024726,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0053",
+      "last_price": 240.3388,
+      "expected_return": 0.0002968963411752,
+      "risk": 0.015943325418882,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0054",
+      "last_price": 206.1582,
+      "expected_return": 0.0005656763101115,
+      "risk": 0.0139719561603426,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0055",
+      "last_price": 217.4463,
+      "expected_return": 0.0002292124385048,
+      "risk": 0.0215638893407523,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0056",
+      "last_price": 238.6041,
+      "expected_return": -8.93039169491401e-06,
+      "risk": 0.0219931440489214,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0057",
+      "last_price": 148.4964,
+      "expected_return": 0.0002346941998513,
+      "risk": 0.0108607534886563,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0058",
+      "last_price": 179.2475,
+      "expected_return": -0.0006966725824411,
+      "risk": 0.0240684049730686,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0059",
+      "last_price": 59.1432,
+      "expected_return": -0.0005688585793395,
+      "risk": 0.0129023072641276,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0060",
+      "last_price": 52.0684,
+      "expected_return": -0.0004602013120873,
+      "risk": 0.0210015613838305,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0061",
+      "last_price": 207.1528,
+      "expected_return": 0.00019555868126,
+      "risk": 0.0243363975616446,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0062",
+      "last_price": 151.9069,
+      "expected_return": -0.0001161978525098,
+      "risk": 0.0190731620171122,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0063",
+      "last_price": 178.2661,
+      "expected_return": -0.0005110483150283,
+      "risk": 0.0082310145290238,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0064",
+      "last_price": 234.1997,
+      "expected_return": 0.0007656186642891,
+      "risk": 0.0167227391034786,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0065",
+      "last_price": 197.7211,
+      "expected_return": -0.0002521563194135,
+      "risk": 0.0073755424619115,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0066",
+      "last_price": 175.0022,
+      "expected_return": -0.0001079365615402,
+      "risk": 0.0207828407973785,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0067",
+      "last_price": 176.578,
+      "expected_return": -0.000180597846902,
+      "risk": 0.0106263034774776,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0068",
+      "last_price": 105.106,
+      "expected_return": -0.0006361140894464,
+      "risk": 0.0189042964612003,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0069",
+      "last_price": 28.629,
+      "expected_return": 0.0004632540308604,
+      "risk": 0.0232017934826039,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0070",
+      "last_price": 142.2809,
+      "expected_return": -0.0001030834754622,
+      "risk": 0.0086201970134034,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0071",
+      "last_price": 80.0837,
+      "expected_return": -0.0009674857802145,
+      "risk": 0.0128571567720233,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0072",
+      "last_price": 134.388,
+      "expected_return": 0.0009280274047195,
+      "risk": 0.0179423757614713,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0073",
+      "last_price": 258.9529,
+      "expected_return": 0.0006315272231908,
+      "risk": 0.01339317185619,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0074",
+      "last_price": 85.5031,
+      "expected_return": 0.0004471187081836,
+      "risk": 0.0084963788324943,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0075",
+      "last_price": 36.3248,
+      "expected_return": 0.000738183741037,
+      "risk": 0.0055814322833759,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0076",
+      "last_price": 98.7875,
+      "expected_return": 0.0008136145072111,
+      "risk": 0.0131319628740392,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0077",
+      "last_price": 102.2063,
+      "expected_return": -0.0003250205872311,
+      "risk": 0.0179841805316384,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0078",
+      "last_price": 205.3366,
+      "expected_return": 0.0002219173568333,
+      "risk": 0.0164796841630497,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0079",
+      "last_price": 175.969,
+      "expected_return": 0.0002176156184111,
+      "risk": 0.0081248247952128,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0080",
+      "last_price": 239.4915,
+      "expected_return": -0.0004654006623788,
+      "risk": 0.0140138688773477,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0081",
+      "last_price": 206.0078,
+      "expected_return": -0.0005560954971058,
+      "risk": 0.012389420923625,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0082",
+      "last_price": 133.7883,
+      "expected_return": -0.0007721854903619,
+      "risk": 0.0104840480458679,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0083",
+      "last_price": 247.9257,
+      "expected_return": 0.0003186283918329,
+      "risk": 0.0195854248772077,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0084",
+      "last_price": 66.7524,
+      "expected_return": 0.0005618379820615,
+      "risk": 0.0111930406005436,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0085",
+      "last_price": 26.3594,
+      "expected_return": 0.000521905959034,
+      "risk": 0.0158028390466605,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0086",
+      "last_price": 45.2134,
+      "expected_return": -0.00036744924563,
+      "risk": 0.0234644707053923,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0087",
+      "last_price": 222.2606,
+      "expected_return": -0.0005894802990695,
+      "risk": 0.0157855196450716,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0088",
+      "last_price": 149.3256,
+      "expected_return": -9.277164309075615e-05,
+      "risk": 0.0173404582032112,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0089",
+      "last_price": 65.1561,
+      "expected_return": 9.362692048102112e-05,
+      "risk": 0.006464919723351,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0090",
+      "last_price": 160.2925,
+      "expected_return": 0.0008381742559371,
+      "risk": 0.0085626828748347,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0091",
+      "last_price": 62.6474,
+      "expected_return": 0.0007496463085481,
+      "risk": 0.0070190239859622,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0092",
+      "last_price": 214.9697,
+      "expected_return": 0.0008321166626036,
+      "risk": 0.0202962589671168,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0093",
+      "last_price": 144.9238,
+      "expected_return": 0.0007005247702719,
+      "risk": 0.0217184216183368,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0094",
+      "last_price": 126.6859,
+      "expected_return": 0.0009291624088726,
+      "risk": 0.0087291058638915,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0095",
+      "last_price": 104.4234,
+      "expected_return": -6.900000566188518e-05,
+      "risk": 0.0093854350184618,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0096",
+      "last_price": 196.4791,
+      "expected_return": -0.0009050530051338,
+      "risk": 0.0114641457898556,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0097",
+      "last_price": 121.3075,
+      "expected_return": -0.000832875935703,
+      "risk": 0.0168215523390767,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0098",
+      "last_price": 44.542,
+      "expected_return": -0.0002194477164553,
+      "risk": 0.0174359238760003,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0099",
+      "last_price": 53.0417,
+      "expected_return": -0.000484625817454,
+      "risk": 0.0187350791708291,
+      "updated_at": "2026-01-05T08:00:00"
+    },
+    {
+      "asset_id": "ASSET_0100",
+      "last_price": 289.3313,
+      "expected_return": -0.0006601188172778,
+      "risk": 0.0231038551242692,
+      "updated_at": "2026-01-05T08:00:00"
+    }
+  ]
+}

@@ -1,0 +1,306 @@
+name: vt-exp3
+
+services:
+
+  # -------------------------------------------------------------------
+  # Redis
+  #
+  # Shared by the user-request and market-data pipelines.
+  # -------------------------------------------------------------------
+
+  redis:
+    image: redis:latest
+
+    command:
+      - redis-server
+      - --save
+      - ""
+      - --appendonly
+      - "no"
+
+    healthcheck:
+      test:
+        - CMD
+        - redis-cli
+        - ping
+      interval: 2s
+      timeout: 2s
+      retries: 10
+
+
+  # -------------------------------------------------------------------
+  # NATS JetStream
+  #
+  # Required only when the market architecture is event-driven.
+  # -------------------------------------------------------------------
+
+  nats:
+    image: nats:latest
+
+    command:
+      - -js
+      - -m
+      - "8222"
+
+
+  # ===================================================================
+  # USER-REQUEST PIPELINE
+  # ===================================================================
+
+
+  # -------------------------------------------------------------------
+  # Monolith
+  # -------------------------------------------------------------------
+
+  monolith:
+    image: vt-experiments:local
+
+    command:
+      - python
+      - -m
+      - src.ur_pipeline.monolith_api
+
+    environment:
+      MD_REDIS_HOST: redis
+      MD_REDIS_PORT: "6379"
+
+    ports:
+      - "8100:8100"
+
+    depends_on:
+      redis:
+        condition: service_healthy
+
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import requests; requests.get('http://127.0.0.1:8100/health', timeout=2).raise_for_status()"
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+
+  # -------------------------------------------------------------------
+  # Request Processor
+  # -------------------------------------------------------------------
+
+  request-processor:
+    image: vt-experiments:local
+
+    command:
+      - python
+      - -m
+      - src.ur_pipeline.services.request_processor_service
+
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import requests; requests.get('http://127.0.0.1:8201/health', timeout=2).raise_for_status()"
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+
+  # -------------------------------------------------------------------
+  # Portfolio Generator
+  # -------------------------------------------------------------------
+
+  portfolio-generator:
+    image: vt-experiments:local
+
+    command:
+      - python
+      - -m
+      - src.ur_pipeline.services.portfolio_generator_service
+
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import requests; requests.get('http://127.0.0.1:8202/health', timeout=2).raise_for_status()"
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+
+  # -------------------------------------------------------------------
+  # Portfolio Evaluator
+  # -------------------------------------------------------------------
+
+  portfolio-evaluator:
+    image: vt-experiments:local
+
+    command:
+      - python
+      - -m
+      - src.ur_pipeline.services.portfolio_evaluator_service
+
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import requests; requests.get('http://127.0.0.1:8203/health', timeout=2).raise_for_status()"
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+
+  # -------------------------------------------------------------------
+  # Microservice Coordinator
+  # -------------------------------------------------------------------
+
+  coordinator:
+    image: vt-experiments:local
+
+    command:
+      - python
+      - -m
+      - src.ur_pipeline.coordinator_api
+
+    environment:
+      MD_REDIS_HOST: redis
+      MD_REDIS_PORT: "6379"
+
+      UR_REQUEST_PROCESSOR_URL: http://request-processor:8201/process
+      UR_PORTFOLIO_GENERATOR_URL: http://portfolio-generator:8202/generate
+      UR_PORTFOLIO_EVALUATOR_URL: http://portfolio-evaluator:8203/evaluate
+
+    ports:
+      - "8200:8200"
+
+    depends_on:
+      redis:
+        condition: service_healthy
+
+      request-processor:
+        condition: service_healthy
+
+      portfolio-generator:
+        condition: service_healthy
+
+      portfolio-evaluator:
+        condition: service_healthy
+
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import requests; requests.get('http://127.0.0.1:8200/health', timeout=2).raise_for_status()"
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+
+  # ===================================================================
+  # MARKET-DATA PIPELINE
+  # ===================================================================
+
+
+  # -------------------------------------------------------------------
+  # Direct API
+  # -------------------------------------------------------------------
+
+  direct-api:
+    image: vt-experiments:local
+
+    command:
+      - python
+      - -m
+      - src.md_pipeline.direct_api
+
+    environment:
+      MD_REDIS_HOST: redis
+      MD_REDIS_PORT: "6379"
+
+      MD_SYNTHETIC_WORKLOAD: ${MD_SYNTHETIC_WORKLOAD:-light}
+
+      MD_DIRECT_API_HOST: 0.0.0.0
+      MD_DIRECT_API_PORT: "8000"
+
+    ports:
+      - "8000:8000"
+
+    depends_on:
+      redis:
+        condition: service_healthy
+
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import requests; requests.get('http://127.0.0.1:8000/health', timeout=2).raise_for_status()"
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+
+  # -------------------------------------------------------------------
+  # Event Consumer
+  #
+  # No container_name so this can later be scaled.
+  # -------------------------------------------------------------------
+
+  event-consumer:
+    image: vt-experiments:local
+
+    command:
+      - python
+      - -m
+      - src.md_pipeline.event_consumer
+
+    environment:
+      MD_REDIS_HOST: redis
+      MD_REDIS_PORT: "6379"
+
+      MD_NATS_URL: nats://nats:4222
+
+      MD_SYNTHETIC_WORKLOAD: ${MD_SYNTHETIC_WORKLOAD:-light}
+
+    depends_on:
+      redis:
+        condition: service_healthy
+
+      nats:
+        condition: service_started
+
+
+  # ===================================================================
+  # EXPERIMENT 3 RUNNER
+  # ===================================================================
+
+  runner:
+    image: vt-experiments:local
+
+    environment:
+
+      # ---------------------------------------------------------------
+      # Redis
+      # ---------------------------------------------------------------
+
+      MD_REDIS_HOST: redis
+      MD_REDIS_PORT: "6379"
+
+      # ---------------------------------------------------------------
+      # User architectures
+      # ---------------------------------------------------------------
+
+      UR_MONOLITH_API_URL: http://monolith:8100/portfolio
+      UR_COORDINATOR_URL: http://coordinator:8200/portfolio
+
+      # ---------------------------------------------------------------
+      # Market architectures
+      # ---------------------------------------------------------------
+
+      MD_DIRECT_API_URL: http://direct-api:8000/market-event
+      MD_NATS_URL: nats://nats:4222
+
+    volumes:
+      - ../results:/app/results

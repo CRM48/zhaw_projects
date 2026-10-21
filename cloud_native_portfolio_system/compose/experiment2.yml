@@ -1,0 +1,127 @@
+name: vt-exp2
+
+services:
+
+  # -------------------------------------------------------------------
+  # Redis
+  # -------------------------------------------------------------------
+
+  redis:
+    image: redis:latest
+
+    command:
+      - redis-server
+      - --save
+      - ""
+      - --appendonly
+      - "no"
+
+    healthcheck:
+      test:
+        - CMD
+        - redis-cli
+        - ping
+      interval: 2s
+      timeout: 2s
+      retries: 10
+
+
+  # -------------------------------------------------------------------
+  # NATS JetStream
+  # -------------------------------------------------------------------
+
+  nats:
+    image: nats:latest
+
+    command:
+      - -js
+      - -m
+      - "8222"
+
+
+  # -------------------------------------------------------------------
+  # Direct Market API
+  # -------------------------------------------------------------------
+
+  direct-api:
+    image: vt-experiments:local
+
+    command:
+      - python
+      - -m
+      - src.md_pipeline.direct_api
+
+    environment:
+      MD_REDIS_HOST: redis
+      MD_REDIS_PORT: "6379"
+      MD_SYNTHETIC_WORKLOAD: ${MD_SYNTHETIC_WORKLOAD:-light}
+      MD_DIRECT_API_HOST: 0.0.0.0
+      MD_DIRECT_API_PORT: "8000"
+
+    depends_on:
+      redis:
+        condition: service_healthy
+
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import requests; requests.get('http://127.0.0.1:8000/health', timeout=2).raise_for_status()"
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+
+  # -------------------------------------------------------------------
+  # Event Consumer
+  #
+  # Deliberately has no container_name because Compose must be able
+  # to scale this service to multiple replicas.
+  # -------------------------------------------------------------------
+
+  event-consumer:
+    image: vt-experiments:local
+
+    command:
+      - python
+      - -m
+      - src.md_pipeline.event_consumer
+
+    environment:
+      MD_REDIS_HOST: redis
+      MD_REDIS_PORT: "6379"
+      MD_NATS_URL: nats://nats:4222
+      MD_SYNTHETIC_WORKLOAD: ${MD_SYNTHETIC_WORKLOAD:-light}
+
+    depends_on:
+      redis:
+        condition: service_healthy
+
+      nats:
+        condition: service_started
+
+
+  # -------------------------------------------------------------------
+  # Experiment Runner
+  #
+  # Used for:
+  # - Redis reset
+  # - NATS setup
+  # - market replay
+  # - verification
+  #
+  # It does not run continuously.
+  # -------------------------------------------------------------------
+
+  runner:
+    image: vt-experiments:local
+
+    environment:
+      MD_REDIS_HOST: redis
+      MD_REDIS_PORT: "6379"
+      MD_DIRECT_API_URL: http://direct-api:8000/market-event
+      MD_NATS_URL: nats://nats:4222
+
+    volumes:
+      - ../results:/app/results

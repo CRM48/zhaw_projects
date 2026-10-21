@@ -1,0 +1,59 @@
+name: vt-exp4
+
+services:
+
+  # -------------------------------------------------------------------
+  # Portfolio Evaluator
+  #
+  # This is the same evaluator image that will later be deployed as:
+  #
+  # 1. An always-running Kubernetes Deployment
+  # 2. A Knative scale-to-zero Service
+  #
+  # No application logic changes between the two.
+  # -------------------------------------------------------------------
+
+  portfolio-evaluator:
+    image: vt-experiments:local
+
+    command:
+      - python
+      - -m
+      - src.ur_pipeline.services.portfolio_evaluator_service
+
+    environment:
+      UR_PORTFOLIO_EVALUATOR_HOST: 0.0.0.0
+      UR_PORTFOLIO_EVALUATOR_PORT: "8203"
+
+    ports:
+      - "8203:8203"
+
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import requests; requests.get('http://127.0.0.1:8203/health', timeout=2).raise_for_status()"
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+
+  # -------------------------------------------------------------------
+  # Experiment 4 Runner
+  #
+  # Used to execute the idle -> burst -> idle -> burst workload.
+  # -------------------------------------------------------------------
+
+  runner:
+    image: vt-experiments:local
+
+    environment:
+      UR_PORTFOLIO_EVALUATOR_URL: http://portfolio-evaluator:8203/evaluate
+
+    volumes:
+      - ../results:/app/results
+
+    depends_on:
+      portfolio-evaluator:
+        condition: service_healthy

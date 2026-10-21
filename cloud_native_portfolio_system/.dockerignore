@@ -1,0 +1,30 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Git
+.git/
+.gitignore
+
+# Editors
+.vscode/
+.idea/
+
+# Test/cache files
+.pytest_cache/
+
+# Local experiment output
+results/
+
+# Logs
+*.log
+
+# Local environment files
+.env
