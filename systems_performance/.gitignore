@@ -1,0 +1,12 @@
+
+# Compiled binaries
+/lockbench
+/lockbench_test
+
+# Generated experiment results
+/results/
+
+# Temporary files
+*.o
+*.out
+*.log
